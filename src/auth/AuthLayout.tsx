@@ -1,4 +1,5 @@
 import { Outlet, Navigate } from "react-router-dom";
+// import sideImage from "/assets/images/cat.jpg";
 
 const AuthLayout = () => {
   const isAuthenticated = false;
@@ -13,7 +14,11 @@ const AuthLayout = () => {
             <Outlet />
           </section>
 
-          <img />
+          <img
+            src="/assets/images/cat.jpg"
+            alt="logo"
+            className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"
+          />
         </>
       )}
     </>
