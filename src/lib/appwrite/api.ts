@@ -18,7 +18,7 @@ export async function createUserAccount(user: INewUser) {
       accountId: newAccount.$id,
       name: newAccount.name,
       email: newAccount.email,
-      userName: user.username,
+      username: user.username,
       imageUrl: avatarUrl,
     });
 
@@ -34,7 +34,7 @@ export async function saveUserToDB(user: {
   email: string;
   name: string;
   imageUrl: URL;
-  userName?: string;
+  username?: string;
 }) {
   try {
     const newUser = await databases.createDocument(
@@ -71,6 +71,16 @@ export async function getCurrentUser() {
     );
 
     if (!currentUser) throw Error;
+    return currentUser.documents[0];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function signOutAccount() {
+  try {
+    const session = await account.deleteSession("current");
+    return session;
   } catch (error) {
     console.log(error);
   }
