@@ -76,7 +76,7 @@ const LeftSideBar = () => {
           signOut();
         }}
       >
-        <img src="/assets/icons/logout.svg" alt="logout" />
+        <img src="/assets/icons/icons8-logout.png" alt="logout" />
         <p className="small-medium lg:base-medium">Logout</p>
       </Button>
     </nav>
