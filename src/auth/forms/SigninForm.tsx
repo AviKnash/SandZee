@@ -57,7 +57,7 @@ const SigninForm = () => {
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
+        <img src="/assets/images/bubble-auth.png" alt="logo" />
         <h2 className="hr-bold md:h2-bold pt-5 sm:pt-12">
           Login to your account
         </h2>
