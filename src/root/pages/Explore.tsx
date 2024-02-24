@@ -84,7 +84,7 @@ const Explore = () => {
           <Loader />
         </div>
       )}
-    </div>
+  </div>
   );
 };
 
