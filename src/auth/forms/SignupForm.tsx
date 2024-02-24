@@ -16,7 +16,6 @@ import { SignupValidation } from "@/lib/validation";
 import { z } from "zod";
 import Loader from "@/components/shared/Loader";
 import { Link, useNavigate } from "react-router-dom";
-import { createUserAccount } from "@/lib/appwrite/api";
 import {
   useCreateUserAccount,
   useSignInAccount,
@@ -25,13 +24,13 @@ import { useUserContext } from "@/context/AuthContext";
 
 const SignupForm = () => {
   const { toast } = useToast();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount } =
     useCreateUserAccount();
 
-  const { mutateAsync: signInAccount, isPending: isSigningIn } =
+  const { mutateAsync: signInAccount } =
     useSignInAccount();
 
   // 1. Define your form.
