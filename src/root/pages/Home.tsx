@@ -6,8 +6,7 @@ import { Models } from "appwrite";
 const Home = () => {
   const {
     data: posts,
-    isPending: isPostLoading,
-    isError: isErrorPosts,
+    isPending: isPostLoading
   } = useGetRecentPosts();
 
   console.log(posts);
