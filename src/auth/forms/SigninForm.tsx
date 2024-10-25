@@ -51,13 +51,33 @@ const SigninForm = () => {
       form.reset();
       navigate("/");
     } else {
-      return toast({ title: "Sign up failed. Please try again." });
+      return toast({ title: "Sign in failed. Please try again." });
     }
   }
+
+  const onUseDemoAccount = async () => {
+    const session = await signInAccount({
+      email: import.meta.env.VITE_GUEST_USERNAME,
+      password: import.meta.env.VITE_GUEST_PASSWORD,
+    });
+
+    if (!session) {
+      return toast({ title: "Sign in failed. Please try again." });
+    }
+    const isLoggedIn = await checkAuthUser();
+
+    if (isLoggedIn) {
+      form.reset();
+      navigate("/"); 
+    } else {
+      return toast({ title: "Sign in failed. Please try again." });
+    }
+  }
+
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/bubble-auth.png" alt="logo" />
+        <img src="/assets/images/bubble-auth.png" draggable="false" alt="logo" />
         <h2 className="hr-bold md:h2-bold pt-5 sm:pt-12">
           Login to your account
         </h2>
@@ -102,6 +122,15 @@ const SigninForm = () => {
               </div>
             ) : (
               "Sign in"
+            )}
+          </Button>
+          <Button onClick={onUseDemoAccount} className="shad-button_primary">
+            {isUserLoading ? (
+              <div className="flex-center gap-2">
+                <Loader /> Loading...
+              </div>
+            ) : (
+              "Try a demo account!"
             )}
           </Button>
           <p className="text-small-regular text-light-2 text-center mt-2">
