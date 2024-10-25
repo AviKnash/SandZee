@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+#  [**Bubble**](https://www.tinybubbles.online) 🖥️🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Bubble** is a modern social media platform designed for a clean and user-friendly experience. With infinite scrolling, responsive design for mobile, and a focus on visual content, users can effortlessly view and engage with a continuous stream of images and posts.
 
-Currently, two official plugins are available:
+![bubble](https://github.com/user-attachments/assets/6fd5d0ad-d8a8-4b6b-864e-cdfdda540dc0)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🌟 **Features**
+- **Create Posts**: Share your thoughts, images, and moments with friends and followers.
+- **Infinite Scrolling**: Browse an endless stream of content, seamlessly loading as you scroll.
+- **Follow Others**: Stay connected by following friends, creators, and topics that interest you.
+- **Unified Timeline**: Access a shared feed where all users' posts are visible in one place.
+- **User Management**: Add and manage users to connect with people easily.
+- **Fully Mobile Responsive**: Enjoy a sleek, optimized experience across all devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ **Technologies Used**
+- **Frontend**: Next.js, TailwindCSS, TypeScript
+- **Backend**: AppwriteDB solution
+- **Cloud**: Hosted on vercel with custom domain.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 📸 **Screenshots**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![home](https://github.com/user-attachments/assets/a15a6b52-4b9c-4962-99bd-58bfae0bc446)
+
+![search](https://github.com/user-attachments/assets/22059f4b-794d-4e19-876d-8fecb9512688)
+
+
+## 📞 **Contact**
+Any feedback on my small project would be appreciated!:
+
+- Email: [aavinash1997@gmail.com](mailto:aavinash1997@gmail.com)
