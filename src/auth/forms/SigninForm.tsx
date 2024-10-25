@@ -115,7 +115,15 @@ const SigninForm = () => {
               </FormItem>
             )}
           />
-
+          <Button type="submit" className="shad-button_primary">
+            {isUserLoading ? (
+              <div className="flex-center gap-2">
+                <Loader /> Loading...
+              </div>
+            ) : (
+              "Sign in"
+            )}
+          </Button>
           <Button onClick={onUseDemoAccount} className="shad-button_primary">
             {isUserLoading ? (
               <div className="flex-center gap-2">
